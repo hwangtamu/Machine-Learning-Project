@@ -52,5 +52,11 @@ for i in range(size/2,size):
   if (y_pred[i]==0):
     count2+=1
 
-print "the number of missclassified bengin urls = ", count1
-print "the number of missclassified malicious urls = ", count2
+precision = float(size/2-count2)/float(size/2-count2+count1)
+recall = float(size/2-count2)/float(size/2)
+f1 = 2*precision*recall/(precision+recall)
+print 'false positive = ', count1
+print 'false negative = ', count2
+print 'precision = ', precision
+print 'recall = ', recall
+print 'f-measure = ', f1
