@@ -37,7 +37,7 @@ for i in range(0,size):
   data2[i]=features_url(urls2[i],dim)
 
 # the definition of SVM
-clf = svm.SVC(kernel='rbf',C=2.0)  # you can change this
+clf = svm.SVC(kernel='rbf',C=1.0)  # you can change this
 clf.fit(data1,target1)
 
 y_pred=clf.predict(data2)
