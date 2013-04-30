@@ -4,7 +4,7 @@
     <list default="true" id="2e6e682b-f927-445f-b231-7ca5bc44d92a" name="Default" comment="" />
     <ignored path="Machine-Learning-Project.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="2e6e682b-f927-445f-b231-7ca5bc44d92a" time="1366518192821" ignored="false" />
+    <file path="/Dummy.txt" changelist="2e6e682b-f927-445f-b231-7ca5bc44d92a" time="1366560391004" ignored="false" />
     <file path="/loadmat.py" changelist="2e6e682b-f927-445f-b231-7ca5bc44d92a" time="1366526003244" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +28,7 @@
       <file leaf-file-name="loadmat.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loadmat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="32" selection-start="973" selection-end="973" vertical-scroll-proportion="0.6642984">
+            <state line="52" column="32" selection-start="973" selection-end="973" vertical-scroll-proportion="0.19538188">
               <folding />
             </state>
           </provider>
@@ -114,12 +114,12 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="editor.preferences.appearance" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="E:/PyWorkspace" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -215,7 +215,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25378788" sideWeight="0.6706282" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25757575" sideWeight="0.6706282" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -300,7 +300,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/loadmat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="32" selection-start="973" selection-end="973" vertical-scroll-proportion="0.6642984">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loadmat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="32" selection-start="973" selection-end="973" vertical-scroll-proportion="0.19538188">
           <folding />
         </state>
       </provider>
