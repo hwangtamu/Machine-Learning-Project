@@ -74,26 +74,3 @@ def features_url(url,dim):
   vec[15]=url.count('www')
 
   return vec
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
