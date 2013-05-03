@@ -10,6 +10,8 @@ from sklearn import svm
 from features import *
 
 # reading training data
+Mali = []
+Ben = []
 f = open('training_data1.txt')
 urls1 = f.readlines()
 f.close()
@@ -37,33 +39,52 @@ for i in range(0,size):
   data2[i]=features_url(urls2[i],dim)
 
 # the definition of SVM
-clf = svm.SVC(kernel='rbf',C=2.0)  # you can change this
-clf.fit(data1,target1)
+a = []
+for i in range(5):
+    a.append(float(0.1+0.2*(i)))
 
-y_pred=clf.predict(data2)
+for g in a:
+    clf = svm.SVC(kernel='rbf', gamma=g, C=1.0)  # you can change this
+    clf.fit(data1,target1)
 
-count1=0
-count2=0
-for i in range(0,size/2):
-  if (y_pred[i]==1):
-    count1+=1
+    y_pred=clf.predict(data2)
 
-for i in range(size/2,size):
-  if (y_pred[i]==0):
-    count2+=1
+    count1=0
+    count2=0
+    for i in range(0,size/2):
+        if (y_pred[i]==1):
+            count1+=1
 
-<<<<<<< HEAD
-print "the number of missclassified bengin urls = ", count1
-print "the number of missclassified malicious urls = ", count2
+    for i in range(size/2,size):
+        if (y_pred[i]==0):
+            count2+=1
 
 
-=======
-precision = float(size/2-count2)/float(size/2-count2+count1)
-recall = float(size/2-count2)/float(size/2)
-f1 = 2*precision*recall/(precision+recall)
-print 'false positive = ', count1
-print 'false negative = ', count2
-print 'precision = ', precision
-print 'recall = ', recall
-print 'f-measure = ', f1
->>>>>>> 5384d093c54dc5cdba6e8b5f1d3767e889b646f9
+    precision = float(size/2-count2)/float(size/2-count2+count1)
+    recall = float(size/2-count2)/float(size/2)
+    f1 = 2*precision*recall/(precision+recall)
+    print 'For the malicious URLs'
+    print 'false positive = ', count1
+    print 'false negative = ', count2
+    print 'precision = ', precision
+    print 'recall = ', recall
+    print 'f-measure = ', f1
+    print '-------------------------------------'
+
+    precision1 = float(size/2-count1)/float(size/2-count1+count2)
+    recall1 = float(size/2-count1)/float(size/2)
+    f11 = 2*precision1*recall1/(precision1+recall1)
+    print 'For the benign URLs'
+    print 'false positive = ', count2
+    print 'false negative = ', count1
+    print 'precision = ', precision1
+    print 'recall = ', recall1
+    print 'f-measure = ', f11
+    Mali.append(str(g)+' '+str(count1)+' '+str(count2)+' '+str(precision)+' '+str(recall)+' '+str(f1))
+    Ben.append(str(g)+' '+str(count2)+' '+str(count1)+' '+str(precision1)+' '+str(recall1)+' '+str(f11))
+f = open('./mali.txt', 'w')
+for i in Mali:
+    f.write(i+'\n')
+ff = open('./ben.txt', 'w')
+for j in Ben:
+    ff.write(j+'\n')

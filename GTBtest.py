@@ -56,8 +56,19 @@ for i in range(size/2,size):
 precision = float(size/2-count2)/float(size/2-count2+count1)
 recall = float(size/2-count2)/float(size/2)
 f1 = 2*precision*recall/(precision+recall)
+print 'For the malicious URLs'
 print 'false positive = ', count1
 print 'false negative = ', count2
+print 'precision = ', precision
+print 'recall = ', recall
+print 'f-measure = ', f1
+
+precision = float(size/2-count1)/float(size/2-count1+count2)
+recall = float(size/2-count1)/float(size/2)
+f1 = 2*precision*recall/(precision+recall)
+print 'For the benign URLs'
+print 'false negative = ', count1
+print 'false positive = ', count2
 print 'precision = ', precision
 print 'recall = ', recall
 print 'f-measure = ', f1
