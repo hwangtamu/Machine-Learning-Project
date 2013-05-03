@@ -1,14 +1,17 @@
-# This code is to train and test the data using Naive Bayes classifier
+# This code is to train and test the data using Support 
+# Vector machine (SVM) classifier
 import math
 from numpy import *
 from numpy.linalg import *
 import string
 import re
 import urlparse
-from sklearn.naive_bayes import GaussianNB
+from sklearn import svm
 from features import *
 
 # reading training data
+Mali = []
+Ben = []
 f = open('training_data1.txt')
 urls1 = f.readlines()
 f.close()
@@ -35,18 +38,21 @@ data2=zeros(size*dim).reshape((size, dim))
 for i in range(0,size):
   data2[i]=features_url(urls2[i],dim)
 
-gnb = GaussianNB()
-y_pred = gnb.fit(data1, target1).predict(data2)
+# the definition of SVM
+clf = svm.NuSVC()  # NuSVM
+clf.fit(data1,target1)
 
+y_pred=clf.predict(data2)
 count1=0
 count2=0
 for i in range(0,size/2):
-  if (y_pred[i]==1):
-    count1+=1
+    if (y_pred[i]==1):
+        count1+=1
 
 for i in range(size/2,size):
-  if (y_pred[i]==0):
-    count2+=1
+    if (y_pred[i]==0):
+        count2+=1
+
 
 precision = float(size/2-count2)/float(size/2-count2+count1)
 recall = float(size/2-count2)/float(size/2)
@@ -68,3 +74,4 @@ print 'false negative = ', count1
 print 'precision = ', precision1
 print 'recall = ', recall1
 print 'f-measure = ', f11
+
